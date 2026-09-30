@@ -1,0 +1,47 @@
+:focus-visible {
+  outline: 2px solid #ffd028;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+  button { min-width: 44px; min-height: 44px; }
+}
+
+/* Cacher les scrollbars sur les carrousels horizontaux */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* Empêcher le scroll quand un overlay est ouvert */
+body[data-locked="true"] { overflow: hidden; }
+
+/* Ligne clamp (fallback si Tailwind ne le charge pas) */
+.line-clamp-1, .line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-1 { line-clamp: 1; -webkit-line-clamp: 1; }
+.line-clamp-2 { line-clamp: 2; -webkit-line-clamp: 2; }
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Impression : masquer tout sauf l'overlay de confirmation */
+@media print {
+  body > *:not(#checkout-root) { display: none !important; }
+  #checkout-root { position: static !important; }
+  #checkout-root .checkout-overlay { position: static !important; background: white !important; color: black !important; }
+  #checkout-root .checkout-close,
+  #checkout-root .checkout-back-to-shop,
+  #checkout-root .checkout-pay-btn,
+  #checkout-root .checkout-print-link { display: none !important; }
+  #checkout-root header { display: none !important; }
+}

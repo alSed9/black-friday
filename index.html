@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BlaFR — Black Friday maison & déco</title>
+  <meta name="description" content="Black Friday BlaFR : jusqu'à -70% sur le mobilier, la décoration et l'éclairage. Livraison offerte dès 100 €." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#0c0e13",
+            "surface-dim": "#111318",
+            "tertiary": "#ffeeec",
+            "primary-container": "#ffd028",
+            "surface": "#111318",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#005234",
+            "tertiary-fixed": "#ffdad7",
+            "primary": "#fff0cf",
+            "outline": "#9a9079",
+            "on-secondary": "#003822",
+            "surface-container-low": "#1a1b21",
+            "on-background": "#e2e2e9",
+            "on-primary": "#3c2f00",
+            "error": "#ffb4ab",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "tertiary-container": "#ffc8c3",
+            "error-container": "#93000a",
+            "on-tertiary": "#680009",
+            "on-tertiary-container": "#ba061b",
+            "on-secondary-container": "#00613e",
+            "on-primary-container": "#705900",
+            "on-error": "#690005",
+            "on-primary-fixed-variant": "#574500",
+            "outline-variant": "#4e4633",
+            "on-primary-fixed": "#231a00",
+            "on-tertiary-fixed": "#410004",
+            "inverse-surface": "#e2e2e9",
+            "on-tertiary-fixed-variant": "#930012",
+            "on-secondary-fixed": "#002112",
+            "background": "#111318",
+            "surface-variant": "#33353a",
+            "secondary-container": "#01e599",
+            "surface-bright": "#37393f",
+            "on-surface": "#e2e2e9",
+            "surface-tint": "#efc112",
+            "primary-fixed-dim": "#efc112",
+            "inverse-primary": "#735c00",
+            "surface-container-highest": "#33353a",
+            "inverse-on-surface": "#2e3036",
+            "primary-fixed": "#ffe087",
+            "surface-container-high": "#282a2f",
+            "on-surface-variant": "#d1c5ac",
+            "secondary-fixed": "#4dffb2",
+            "secondary-fixed-dim": "#00e297",
+            "secondary": "#70ffba",
+            "surface-container": "#1e2025"
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: {
+            "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem",
+            "space-lg": "1.5rem", "space-xl": "2rem", "space-2xl": "3rem",
+            "margin": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "2.5rem",
+            "gutter": "1rem", "gutter-desktop": "1.25rem"
+          },
+          fontFamily: {
+            "headline-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"],
+            "headline-xl": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"],
+            "display-lg": ["Space Grotesk"], "display-lg-mobile": ["Space Grotesk"],
+            "price-xl": ["Space Grotesk"], "price-sm": ["Space Grotesk"],
+            "title-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "display-lg-mobile": ["36px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "price-xl": ["32px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "price-sm": ["16px", { lineHeight: "20px", fontWeight: "500" }],
+            "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary">
+
+  <!-- ═══════════════════════════════════════════════
+       BARRE D'ANNONCE
+       ═══════════════════════════════════════════════ -->
+  <aside id="announce-bar" class="w-full bg-surface-container-lowest border-b border-outline-variant/30 py-2 px-margin md:px-margin-desktop">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 font-label-md text-label-md">
+      <div class="flex items-center gap-2 text-on-surface">
+        <span class="material-symbols-outlined text-primary-container text-[18px]">bolt</span>
+        <span>Black Friday : jusqu'à -70% · Livraison offerte dès 100 €</span>
+      </div>
+      <div class="hidden md:flex items-center gap-2 bg-surface-container-high px-2 py-0.5 rounded-full border border-outline-variant/40">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+        <span id="announce-countdown" class="font-price-sm text-label-md text-primary-container font-semibold tracking-wide">--:--:--</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-40 w-full bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30">
+    <div class="h-16 md:h-20 max-w-7xl mx-auto px-margin md:px-margin-desktop flex items-center justify-between gap-4">
+
+      <!-- Logo + nav desktop -->
+      <div class="flex items-center gap-6">
+        <a href="#top" class="flex items-center gap-2" aria-label="BlaFR — Accueil">
+          <span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">BlaFR</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Navigation principale">
+          <a href="#produits" class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">Offres</a>
+          <a href="#categories" class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">Catégories</a>
+          <a href="#avis" class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">Avis</a>
+          <a href="#faq" class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">FAQ</a>
+        </nav>
+      </div>
+
+      <!-- Recherche desktop -->
+      <div class="hidden md:block flex-1 max-w-md">
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-4 text-on-surface-variant pointer-events-none text-[20px]">search</span>
+          <input type="search" data-search-input placeholder="Rechercher un produit…"
+                 class="w-full h-11 pl-11 pr-4 bg-surface-container rounded-full border border-outline-variant/50 text-on-surface placeholder:text-on-surface-variant/70 font-body-md focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" />
+        </div>
+      </div>
+
+      <!-- Actions droite -->
+      <div class="flex items-center gap-2">
+        <!-- Recherche mobile (ouvre un input caché) -->
+        <button type="button" data-action="toggle-mobile-search" aria-label="Rechercher"
+                class="md:hidden w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[22px]">search</span>
+        </button>
+
+        <!-- Panier -->
+        <button type="button" data-action="open-cart" aria-label="Ouvrir le panier"
+                class="relative w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 text-on-surface transition-all">
+          <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+          <span data-cart-badge
+                class="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full bg-primary-container text-on-primary font-headline-sm text-[11px] font-bold flex items-center justify-center shadow-[0_0_12px_rgba(255,208,40,0.5)] hidden">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Recherche mobile dépliante -->
+    <div id="mobile-search" class="md:hidden hidden px-margin pb-3">
+      <div class="relative flex items-center">
+        <span class="material-symbols-outlined absolute left-4 text-on-surface-variant pointer-events-none text-[20px]">search</span>
+        <input type="search" data-search-input placeholder="Rechercher…"
+               class="w-full h-11 pl-11 pr-4 bg-surface-container rounded-full text-on-surface placeholder:text-on-surface-variant/70 font-body-md focus:outline-none" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN
+       ═══════════════════════════════════════════════ -->
+  <main id="top" class="flex-1 w-full">
+
+    <!-- ─── HERO ─── -->
+    <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop pt-space-xl pb-space-2xl">
+      <div class="relative rounded-3xl overflow-hidden bg-surface-container-lowest shadow-xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-surface-container via-surface-container-low to-surface-container-lowest"></div>
+        <div class="relative z-10 p-space-lg md:p-space-2xl flex flex-col gap-space-md max-w-3xl">
+          <div class="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md text-primary-container shadow-sm">
+            <span class="material-symbols-outlined text-[16px] animate-pulse">bolt</span>
+            <span class="font-label-md text-label-md tracking-widest uppercase font-bold text-on-surface">Black Friday · Édition limitée</span>
+          </div>
+          <h1 class="font-headline-xl-mobile md:font-display-lg text-headline-xl-mobile md:text-display-lg font-bold text-on-surface tracking-tight leading-none">
+            Black Friday : la maison à prix cassés
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Jusqu'à -70% sur le mobilier d'architecte, la décoration et l'éclairage. Stocks limités.
+          </p>
+
+          <!-- Compte à rebours -->
+          <div class="grid grid-cols-4 gap-2 max-w-md pt-2" data-countdown-host>
+            <div class="flex flex-col items-center p-2 md:p-3 rounded-2xl bg-surface-container-high/80 backdrop-blur-md">
+              <span data-countdown="days" class="font-headline-lg md:font-headline-xl font-bold text-primary-container leading-none">--</span>
+              <span class="font-label-md text-label-md uppercase text-on-surface-variant mt-1">Jours</span>
+            </div>
+            <div class="flex flex-col items-center p-2 md:p-3 rounded-2xl bg-surface-container-high/80 backdrop-blur-md">
+              <span data-countdown="hours" class="font-headline-lg md:font-headline-xl font-bold text-primary-container leading-none">--</span>
+              <span class="font-label-md text-label-md uppercase text-on-surface-variant mt-1">Heures</span>
+            </div>
+            <div class="flex flex-col items-center p-2 md:p-3 rounded-2xl bg-surface-container-high/80 backdrop-blur-md">
+              <span data-countdown="minutes" class="font-headline-lg md:font-headline-xl font-bold text-primary-container leading-none">--</span>
+              <span class="font-label-md text-label-md uppercase text-on-surface-variant mt-1">Min</span>
+            </div>
+            <div class="flex flex-col items-center p-2 md:p-3 rounded-2xl bg-surface-container-high/80 backdrop-blur-md">
+              <span data-countdown="seconds" class="font-headline-lg md:font-headline-xl font-bold text-primary-container leading-none">--</span>
+              <span class="font-label-md text-label-md uppercase text-on-surface-variant mt-1">Sec</span>
+            </div>
+          </div>
+          <p data-countdown-status role="status" aria-live="polite" class="hidden font-label-lg text-label-lg font-bold text-primary-container">Offre terminée</p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#produits"
+               class="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_0_30px_rgba(255,208,40,0.35)] hover:scale-[1.02] active:scale-95 transition-all">
+              <span>Voir les offres</span>
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-label-md text-label-md text-on-surface-variant">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>Livraison rapide</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>Retours 30 j</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>Paiement sécurisé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── BANDEAU CONFIANCE ─── -->
+    <section class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop pb-space-2xl">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 bg-surface-container-low rounded-3xl p-space-md md:p-space-lg">
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+            <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+          </div>
+          <div><p class="font-title-md text-title-md font-bold text-on-surface">Livraison rapide</p><p class="font-label-md text-label-md text-on-surface-variant">Offerte dès 100 €</p></div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+            <span class="material-symbols-outlined text-[20px]">restart_alt</span>
+          </div>
+          <div><p class="font-title-md text-title-md font-bold text-on-surface">Retours 30 jours</p><p class="font-label-md text-label-md text-on-surface-variant">Simples et gratuits</p></div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+            <span class="material-symbols-outlined text-[20px]">verified_user</span>
+          </div>
+          <div><p class="font-title-md text-title-md font-bold text-on-surface">Paiement sécurisé</p><p class="font-label-md text-label-md text-on-surface-variant">CB · Mobile money · Livraison</p></div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+            <span class="material-symbols-outlined text-[20px]">support_agent</span>
+          </div>
+          <div><p class="font-title-md text-title-md font-bold text-on-surface">Support 7j/7</p><p class="font-label-md text-label-md text-on-surface-variant">Conseillers dédiés</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CATÉGORIES ─── -->
+    <section id="categories" class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop pb-space-2xl">
+      <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-md">Explorer par catégorie</h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <button type="button" data-action="filter-category" data-category="salon"
+                class="group relative h-32 rounded-2xl overflow-hidden bg-surface-container p-3 flex flex-col justify-between text-left hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-primary-container text-[26px]">chair</span>
+          <div><span class="font-title-md text-title-md font-bold text-on-surface block">Salon</span>
+          <span class="font-label-md text-label-md text-on-surface-variant">Jusqu'à -60%</span></div>
+        </button>
+        <button type="button" data-action="filter-category" data-category="chambre"
+                class="group relative h-32 rounded-2xl overflow-hidden bg-surface-container p-3 flex flex-col justify-between text-left hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-primary-container text-[26px]">bed</span>
+          <div><span class="font-title-md text-title-md font-bold text-on-surface block">Chambre</span>
+          <span class="font-label-md text-label-md text-on-surface-variant">Jusqu'à -55%</span></div>
+        </button>
+        <button type="button" data-action="filter-category" data-category="cuisine"
+                class="group relative h-32 rounded-2xl overflow-hidden bg-surface-container p-3 flex flex-col justify-between text-left hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-primary-container text-[26px]">flatware</span>
+          <div><span class="font-title-md text-title-md font-bold text-on-surface block">Cuisine & table</span>
+          <span class="font-label-md text-label-md text-on-surface-variant">Jusqu'à -50%</span></div>
+        </button>
+        <button type="button" data-action="filter-category" data-category="decoration"
+                class="group relative h-32 rounded-2xl overflow-hidden bg-surface-container p-3 flex flex-col justify-between text-left hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-primary-container text-[26px]">potted_plant</span>
+          <div><span class="font-title-md text-title-md font-bold text-on-surface block">Décoration</span>
+          <span class="font-label-md text-label-md text-on-surface-variant">Jusqu'à -65%</span></div>
+        </button>
+        <button type="button" data-action="filter-category" data-category="eclairage"
+                class="group relative h-32 rounded-2xl overflow-hidden bg-surface-container p-3 flex flex-col justify-between text-left hover:bg-surface-container-high transition-colors md:col-span-1 col-span-2">
+          <span class="material-symbols-outlined text-primary-container text-[26px]">light</span>
+          <div><span class="font-title-md text-title-md font-bold text-on-surface block">Éclairage</span>
+          <span class="font-label-md text-label-md text-on-surface-variant">Jusqu'à -70%</span></div>
+        </button>
+      </div>
+    </section>
+
+    <!-- ─── OFFRES FLASH ─── -->
+    <section id="offres-flash" class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop pb-space-2xl">
+      <div class="flex items-center justify-between mb-space-md">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary-container text-[26px]">bolt</span>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Ventes flash</h2>
+        </div>
+        <span class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary-container font-label-md text-label-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+          <span id="flash-countdown">--:--:--</span>
+        </span>
+      </div>
+      <div id="flash-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <!-- injecté par products.js -->
+      </div>
+    </section>
+
+    <!-- ─── CATALOGUE PRODUITS ─── -->
+    <section id="produits" class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop pb-space-2xl scroll-mt-24">
+      <div class="flex items-end justify-between mb-space-md">
+        <div>
+          <span class="font-label-md text-label-md text-primary-container uppercase tracking-widest font-bold">Catalogue</span>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Toutes les offres</h2>
+        </div>
+      </div>
+
+      <!-- Barre d'outils (pastilles, recherche, tri, compteur) -->
+      <div id="catalog-toolbar"><!-- injecté par products.js --></div>
+
+      <!-- Grille produits -->
+      <div id="product-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <!-- injecté par products.js -->
+      </div>
+    </section>
+
+    <!-- ─── AVIS (extras.js remplira) ─── -->
+    <section id="avis" class="w-full bg-surface-container-lowest py-space-2xl">
+      <div class="max-w-7xl mx-auto px-margin md:px-margin-desktop">
+        <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-md">Ils ont craqué</h2>
+        <div id="avis-content"><!-- injecté par extras.js --></div>
+      </div>
+    </section>
+
+    <!-- ─── NEWSLETTER (extras.js remplira) ─── -->
+    <section id="newsletter" class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop py-space-2xl">
+      <div id="newsletter-content"><!-- injecté par extras.js --></div>
+    </section>
+
+    <!-- ─── FAQ (extras.js remplira) ─── -->
+    <section id="faq" class="w-full max-w-7xl mx-auto px-margin md:px-margin-desktop py-space-2xl">
+      <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-md">Questions fréquentes</h2>
+      <div id="faq-content"><!-- injecté par extras.js --></div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER (extras.js remplira)
+       ═══════════════════════════════════════════════ -->
+  <footer id="footer-root" class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-2xl mt-space-2xl">
+    <div class="max-w-7xl mx-auto px-margin md:px-margin-desktop">
+      <div id="footer-content"><!-- injecté par extras.js --></div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTENEURS OVERLAYS
+       ═══════════════════════════════════════════════ -->
+  <div id="cart-root"></div>
+  <div id="modal-root"></div>
+  <div id="checkout-root"></div>
+  <div id="toast-container" aria-live="polite" aria-atomic="false"
+       class="fixed z-[70] inset-x-4 bottom-4 flex flex-col items-stretch gap-2 sm:inset-auto sm:top-24 sm:right-6 sm:bottom-auto sm:w-[380px] pointer-events-none"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPTS (ordre impératif)
+       ═══════════════════════════════════════════════ -->
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/products.js"></script>
+  <script defer src="js/toast.js"></script>
+  <script defer src="js/cart.js"></script>
+  <script defer src="js/checkout.js"></script>
+  <script defer src="js/quickview.js"></script>
+  <script defer src="js/cart-ui.js"></script>
+  <script defer src="js/extras.js"></script>
+</body>
+</html>
